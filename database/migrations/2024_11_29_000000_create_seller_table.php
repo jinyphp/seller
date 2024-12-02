@@ -16,9 +16,10 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
 
+            $table->string('enable')->nullable();
+
             $table->string('auth')->nullable(); // 승인여부
             $table->string('auth_at')->nullable(); // 승인일자
-
 
             // 셀러id
             $table->string('user_id')->nullable();
@@ -37,6 +38,8 @@ return new class extends Migration
 
             $table->string('status')->nullable();
             $table->string('expired_at')->nullable();
+
+            $table->text('description')->nullable();
 
         });
     }

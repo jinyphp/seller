@@ -12,11 +12,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('seller_products', function (Blueprint $table) {
+        Schema::create('seller_product_category', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
 
-            // 활성화
             $table->string('enable')->nullable();
 
             // 셀러id
@@ -26,19 +25,9 @@ return new class extends Migration
 
 
             $table->string('category')->nullable();
-            $table->string('title')->nullable();
-            $table->string('image')->nullable();
-            $table->string('options')->nullable();
             $table->text('description')->nullable();
 
-            $table->string('price')->nullable();
-            $table->string('price_at')->nullable(); // 가격 변동일자
-            $table->string('unit')->nullable(); // 단위
-
             $table->integer('cnt')->default(0);
-            $table->integer('like')->default(0);
-            $table->integer('review')->default(0);
-            $table->integer('rank')->default(0);
 
         });
     }
@@ -50,6 +39,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('seller_products');
+        Schema::dropIfExists('seller_product_category');
     }
 };

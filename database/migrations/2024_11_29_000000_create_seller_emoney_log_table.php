@@ -16,6 +16,7 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
 
+            $table->string('email')->nullable();
             $table->string('user_id')->nullable();
 
             $table->string('type')->nullable(); // 유형
