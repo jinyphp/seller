@@ -18,7 +18,7 @@ class AdminSellerEmoneyLog extends WireTablePopupForms
         $this->setVisit($this);
 
         ## 테이블 정보
-        $this->actions['table'] = "seller_emoney_log";
+        $this->actions['table']['name'] = "seller_emoney_log";
 
         $this->actions['view']['list'] = "jiny-seller::admin.seller_emoney_log.list";
         $this->actions['view']['form'] = "jiny-seller::admin.seller_emoney_log.form";

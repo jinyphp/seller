@@ -18,7 +18,7 @@ class AdminSellerProductsCategory extends WireTablePopupForms
         $this->setVisit($this);
 
         ## 테이블 정보
-        $this->actions['table'] = "seller_product_category";
+        $this->actions['table']['name'] = "seller_product_category";
 
         $this->actions['view']['list'] = "jiny-seller::admin.seller_product_category.list";
         $this->actions['view']['form'] = "jiny-seller::admin.seller_product_category.form";

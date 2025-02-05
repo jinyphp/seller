@@ -20,7 +20,7 @@ class AdminSellerType extends WireTablePopupForms
         $this->setVisit($this);
 
         ## 테이블 정보
-        $this->actions['table'] = "seller_type";
+        $this->actions['table']['name'] = "seller_type";
 
         $this->actions['view']['list'] = "jiny-seller::admin.seller_type.list";
         $this->actions['view']['form'] = "jiny-seller::admin.seller_type.form";
